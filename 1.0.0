@@ -1,0 +1,115 @@
+const botconfig = require("./botconfig.json");
+const Discord = require("discord.js");
+
+const bot = new Discord.Client({disableEveryone: true})
+
+bot.on("ready", async () =>{
+  console.log('${bot.user.username} is online!');
+
+  bot.user.setActivity ("Woof!");
+});
+
+const prefix = "*";
+
+bot.on ("message",(message) => {
+
+  if (message.author.bot) return;
+
+  msg = message.content.toLowerCase();
+
+  if (msg.startsWith ("hello woof")){
+    message.reply ("U'x'U, Woof!");
+  }
+
+  if (msg.startsWith ("woof")){
+    message.channel.send ("woof woof!");
+  }
+
+  if (message.content.startsWith ("🐶")){
+    message.reply (":dog:");
+  }
+
+  if (message.content.startsWith ("👀")){
+    message.channel.send (":eyes:");
+  }
+
+  if (msg.startsWith ("louis")){
+    message.channel.send ("Is a good boi.",{files:["https://i.imgur.com/VKxHFuy.png"]})
+  }
+
+  if (msg.startsWith ("jstris")){
+    message.channel.send ({files:["https://i.imgur.com/v3wW1M2.gif"]})
+  }
+
+  if (msg.startsWith ("pupper")){
+    message.channel.send ({files:["https://i.imgur.com/C763AhM.png"]});
+  }
+
+  if (msg.startsWith ("cri")){
+    message.channel.send ({files:["https://i.imgur.com/eCCOz1R.gif"]})
+  }
+
+  if (msg.startsWith ("doge")){
+    message.channel.send ({files:["https://i.imgur.com/V0uRUnj.png"]})
+  }
+
+  if (msg.startsWith ("happy birthday")){
+    message.channel.send ({files:["https://i.imgur.com/J55hsdX.png"]})
+  }
+
+//iran man:https://imgur.com/JH2ExQL
+
+  dog1 = "https://i.imgur.com/Ti8XOE2.png";
+  dog2 = "https://i.imgur.com/IufuFDk.png";
+  dog3 = "https://i.imgur.com/ssQU1Jz.png";
+  dog4 = "https://i.imgur.com/H7H6JTM.png";
+  dog5 = "https://i.imgur.com/8hrhxAh.png";
+  dog6 = "https://i.imgur.com/dot35u0.png";
+  dog7 = "https://i.imgur.com/rOBYn5v.png";
+  dog8 = "https://i.imgur.com/7SglVs9.png";
+  dog9 = "https://i.imgur.com/2938ZlK.png";
+  dog10 = "https://i.imgur.com/j08Hu8m.png";
+  dog11 = "https://i.imgur.com/yuQfe1G.png";
+  dog12 = "https://i.imgur.com/2O86WiQ.png";
+  dog13 = "https://i.imgur.com/B4IXSNy.png";
+  dog14 = "https://i.imgur.com/sb0UOIo.png";
+  dog15 = "https://i.imgur.com/qIOebk3.png";
+  dog16 = "https://i.imgur.com/LktL2He.png";
+  dog17 = "https://i.imgur.com/JH2ExQL.png";
+  dog18 = "https://i.imgur.com/RGdo4En.png";
+  dog19 = "https://i.imgur.com/SW1Sgas.png";
+  dog20 = "https://i.imgur.com/dbCXBxm.png";
+  dog21 = "https://i.imgur.com/TwuHfnZ.png";
+  dog22 = "https://i.imgur.com/87OQ8JV.png";
+
+  if (msg.startsWith ("puppy")){
+    number = 22;
+    var random = Math.floor (Math.random()*(number - 1 + 1))+1;
+    switch (random) {
+      case 1: message.channel.send ({files:[dog1]}); break;
+      case 2: message.channel.send ({files:[dog2]}); break;
+      case 3: message.channel.send ({files:[dog3]}); break;
+      case 4: message.channel.send ({files:[dog4]}); break;
+      case 5: message.channel.send ({files:[dog5]}); break;
+      case 6: message.channel.send ({files:[dog6]}); break;
+      case 7: message.channel.send ({files:[dog7]}); break;
+      case 8: message.channel.send ({files:[dog8]}); break;
+      case 9: message.channel.send ({files:[dog9]}); break;
+      case 10: message.channel.send ({files:[dog10]}); break;
+      case 11: message.channel.send ({files:[dog11]}); break;
+      case 12: message.channel.send ({files:[dog12]}); break;
+      case 13: message.channel.send ({files:[dog13]}); break;
+      case 14: message.channel.send ({files:[dog14]}); break;
+      case 15: message.channel.send ({files:[dog15]}); break;
+      case 16: message.channel.send ({files:[dog16]}); break;
+      case 17: message.channel.send ({files:[dog17]}); break;
+      case 18: message.channel.send ({files:[dog18]}); break;
+      case 19: message.channel.send ({files:[dog19]}); break;
+      case 20: message.channel.send ({files:[dog20]}); break;
+      case 21: message.channel.send ({files:[dog21]}); break;
+      case 22: message.channel.send ({files:[dog22]}); break;
+    }
+  }
+
+});
+bot.login(botconfig.token);
